@@ -54,8 +54,8 @@ const Hero = ({ type }) => {
         <div className='hero'>
 
             <div className="content">
-                <h1>Where can we take you?</h1>
-                <h2>Top 1% Locations Worldwide</h2>
+                <h1 style={{background: "crimson",  padding: "20px"}}>Your One-Stop Shop for Hotels & Rentals</h1>
+                <h2 style={{background: "crimson"}}>Find your perfect cozy Nest</h2>
                 <div className="headerSearch">
                 <div className="headerSearchItem">
                     <FontAwesomeIcon icon={faBed} className="headerIcon" />

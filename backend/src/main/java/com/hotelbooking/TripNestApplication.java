@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 @EnableCaching
-public class HotelBookingApplication {
+public class TripNestApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(HotelBookingApplication.class, args);
+    SpringApplication.run(TripNestApplication.class, args);
   }
 
 

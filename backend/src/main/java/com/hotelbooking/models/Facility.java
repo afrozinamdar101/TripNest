@@ -14,7 +14,7 @@ import java.io.Serializable;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Amenity {
+public class Facility {
 
   /**
    * Options may be selected for each room for one or more amenities:

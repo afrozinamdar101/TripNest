@@ -46,7 +46,6 @@ function Footer() {
         </ul>
       </div>
       <div className="fText">
-            <p>© 2022 Vacay Break! No rights reserved - CMPE EDS 273 Project!</p>
             <p>Privacy · Terms · Sitemap · Company Details</p>
             </div>
     </div>

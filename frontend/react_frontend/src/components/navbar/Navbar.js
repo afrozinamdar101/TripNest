@@ -32,23 +32,23 @@ function Navbar(props) {
   return (
     <div name="home" className={nav ? "navbar navbar-bg" : "navbar"}>
       <div className={nav ? "logo dark" : "logo"}>
-        <h2>Trip Nest</h2>
+        <h2>TripNest</h2>
       </div>
       <ul className="nav-menu">
         <Link to="/">
           <li className="nav-item">Home</li>
         </Link>
         <Link to="/hotels">
-          <li className="nav-item">Hotels</li>
+          <li className="nav-item">Hotels & Rentals</li>
         </Link>
         {user?.role !== "ADMIN" ? 
           <>
             <Link to="/bookings">
               <li className="nav-item">My Bookings</li>
             </Link>
-            <Link to="/rewards">
+            {/* <Link to="/rewards">
               <li className="nav-item">My Rewards</li>
-            </Link>
+            </Link> */}
           </>
          : 
          <Link to="/admin">
@@ -90,9 +90,9 @@ function Navbar(props) {
           <Link to="/bookings" smooth={true} duration={500}>
             <li>My Bookings</li>
           </Link>
-          <Link to="/rewards" smooth={true} duration={500}>
+          {/* <Link to="/rewards" smooth={true} duration={500}>
             <li>My Rewards</li>
-          </Link>
+          </Link> */}
         </ul>
         <div className="mobile-menu-bottom"></div>
       </div>
