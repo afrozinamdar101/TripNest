@@ -1,7 +1,7 @@
 package com.hotelbooking.controller;
 
-import com.hotelbooking.models.Amenity;
-import com.hotelbooking.service.AmenityService;
+import com.hotelbooking.models.Facility;
+import com.hotelbooking.service.FacilityService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

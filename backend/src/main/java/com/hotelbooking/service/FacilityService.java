@@ -15,7 +15,7 @@ public class FacilityService {
     this.amenityRepository = amenityRepository;
   }
 
-  public void addAmenity(Facility amenity) {
+  public void addFacility(Facility amenity) {
     amenityRepository.save(amenity);
   }
 
@@ -23,7 +23,7 @@ public class FacilityService {
     return (List<Facility>) amenityRepository.findAll();
   }
 
-  public Optional<Facility> getAmenityById(String name) {
+  public Optional<Facility> getFacilityById(String name) {
     return amenityRepository.findById(name);
   }
 }

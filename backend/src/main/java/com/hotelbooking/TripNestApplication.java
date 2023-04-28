@@ -16,6 +16,4 @@ public class TripNestApplication {
   public static void main(String[] args) {
     SpringApplication.run(TripNestApplication.class, args);
   }
-
-
 }

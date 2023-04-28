@@ -5,7 +5,7 @@ import com.hotelbooking.models.request.BookingRequest;
 import com.hotelbooking.models.response.AmenityResponse;
 import com.hotelbooking.models.response.BookingResponse;
 import com.hotelbooking.pricing.*;
-import com.hotelbooking.service.AmenityService;
+import com.hotelbooking.service.FacilityService;
 import com.hotelbooking.service.HotelService;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class ResponseBuilder {
   public PublicHolidayPricing publicHolidayPricing;
   public SeasonalPeakPricing seasonalPeakPricing;
   public WeekendPricing weekendPricing;
-  public AmenityService amenityService;
+  public FacilityService amenityService;
   public HotelService hotelService;
 
   @Autowired
@@ -36,7 +36,7 @@ public class ResponseBuilder {
       PublicHolidayPricing publicHolidayPricing,
       SeasonalPeakPricing seasonalPeakPricing,
       WeekendPricing weekendPricing,
-      AmenityService amenityService,
+      FacilityService amenityService,
       HotelService hotelService) {
     super();
     this.christmasHolidayPricing = christmasHolidayPricing;
@@ -80,7 +80,7 @@ public class ResponseBuilder {
       String key = entry.getKey();
       Integer value = entry.getValue();
       if (value > 0) {
-        Optional<Amenity> amenity = amenityService.getAmenityById(key);
+        Optional<Facility> amenity = amenityService.getFacilityById(key);
         amenity.orElseThrow(() -> new RuntimeException("Amenity not found"));
         amenityPrice = amenity.get().getPrice();
         AmenityResponse am = new AmenityResponse();
