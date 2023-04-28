@@ -9,26 +9,26 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = {"http://localhost:3000", "http://cmpe273projectf.s3-website-us-east-1.amazonaws.com/"}, maxAge = 40000)
-public class AmenityController {
+public class FacilityController {
 
     private final FacilityService FacilityService;
 
-    public AmenityController(FacilityService FacilityService) {
+    public FacilityController(FacilityService FacilityService) {
         this.FacilityService = FacilityService;
     }
 
     @PostMapping("/amenities")
-    public void addAmenity(@RequestBody Amenity amenity) {
-        FacilityService.addAmenity(amenity);
+    public void addFacility(@RequestBody Facility Facility) {
+        FacilityService.addFacility(Facility);
     }
 
     @GetMapping("/amenities")
-    public List<Amenity> getAllAmenities() {
+    public List<Facility> getAllAmenities() {
         return FacilityService.getAllAmenities();
     }
 
     @GetMapping("/amenities/{id}")
-    public Optional<Amenity> getAmenityById(@PathVariable String name)  {
-        return FacilityService.getAmenityById(name);
+    public Optional<Facility> getFacilityById(@PathVariable String name)  {
+        return FacilityService.getFacilityById(name);
     }
 }
